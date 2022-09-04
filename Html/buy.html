@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--The title & encoder-->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Film lovers paradise, you can find any film information you want to find here"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link href="CSS/style1.css" rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/c654056bb7.js" crossorigin="anonymous"></script>
+        <title>Camera Exchange,A gathering place for flim lovers</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                padding-left: 50px;
+                padding-right: 50px;
+            }         
+        </style>
+
+    </head>
+    
+    <body>
+        <!--Navigation Bar Content-->
+    
+        <div class="parent">
+            <div class="div1"> 
+                <div style="padding: 10px; padding-left: 20px; display: inline-block;">
+                    <img src="Data/logo.png"/>
+                  </div>
+      
+                  <nav class="nav" style="float:right;padding:40px;" >
+                    <a href="page_camera.html" style="text-decoration: none;color: white; float: left;">Camera</a>
+                    <a href="page_films.html" style="text-decoration: none;color: white; float: left;">films</a>
+                    <a href="page_lens.html" style="text-decoration: none;color: white; float: left;">lens</a>
+                    <i class="fa-solid fa-magnifying-glass" style="color:white"></i>
+                    <div id="search" style="float: left;">
+                    <input type="" v-model="inputValue" @input="search_point" @keyup.enter="inputadd()" placeholder="Search camera"/>
+                    </div>
+      
+                  </nav>
+            </div>
+            <div class="div3"> 
+                <div id="appa">
+                    <p >Address{{message}}</p>
+                    <textarea v-model="message" placeholder="Type your address"></textarea>
+                </div>
+                    <script>
+                        var app=new Vue({
+                        el:'#appa',
+                        data:{message:''}
+                        })
+                    </script>
+                <div id="appb">
+                    <p >Name{{message}}</p>
+                    <input v-model="message" placeholder="Type name here">
+                </div>
+                <script>
+                    var app=new Vue({
+                    el:'#appb',
+                    data:{message:''}
+                    })
+                </script>
+                <div id="appc">
+                    <p >Tel{{message}}</p>
+                    <input v-model="message" placeholder="Type your phone number here">
+                </div>
+                <script>
+                    var app=new Vue({
+                    el:'#appc',
+                    data:{message:''}
+                    })
+                </script>
+            </div>
+            <div class="div4">
+                <div class="app3">
+                <span>Card type</span>
+                <select v-model="selected">
+                    <option disabled value="">Please select Card Type</option>
+                    <option>Master</option>
+                    <option>Visa</option>
+                    
+                </select>
+                </div>
+                <script>
+                    new Vue({
+                        el: '#app3',
+                        data: {
+                        selected: ''
+                         }
+                        })
+                </script>
+                    <div id="app">
+                        <input v-model="message" placeholder="Type your BSB here">
+                        <p >BSB:{{message}}</p>
+                   </div>
+                    <script>
+                        var app=new Vue({
+                        el:'#app',
+                        data:{message:''}
+                        })
+                    </script>
+                     <div id="app1">
+                        <input v-model="message" placeholder="Type your ACC here">
+                        <p >ACC:{{message}}</p>
+                    </div>
+                        <script>
+                        var app=new Vue({
+                        el:'#app1',
+                        data:{message:''}
+                        })
+                        </script>
+                    <div id="app2">
+                        <input v-model="message" placeholder="Type your Name here">
+                        <p >Name:{{message}}</p>
+                    </div>
+                        <script>
+                        var app=new Vue({
+                         el:'#app2',
+                        data:{message:''}
+                         })
+                         </script>
+             </div>
+
+           
+        </div> 
+       
+    </body>
+</html>

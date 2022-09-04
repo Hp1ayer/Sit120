@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--The title & encoder-->
+        <meta charset="UTF-8"/>
+        <meta name="description" content="Film lovers paradise, you can find any film information you want to find here"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link href="CSS/style1.css" rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/c654056bb7.js" crossorigin="anonymous"></script>
+        <title>Camera Exchange,A gathering place for flim lovers</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                padding-left: 50px;
+                padding-right: 50px;
+            }         
+        </style>
+
+    </head>
+    
+    <body>
+        <!--Navigation Bar Content-->
+    
+        <div class="parent">
+            <div class="div1"> 
+                <div style="padding: 10px; padding-left: 20px; display: inline-block;">
+                    <img src="Data/logo.png"/>
+                  </div>
+      
+                  <nav class="nav" style="float:right;padding:40px;" >
+                    <a href="page_camera.html" style="text-decoration: none;color: white; float: left;">Camera</a>
+                    <a href="page_films.html" style="text-decoration: none;color: white; float: left;">films</a>
+                    <a href="page_lens.html" style="text-decoration: none;color: white; float: left;">lens</a>
+                    <i class="fa-solid fa-magnifying-glass" style="color:white"></i>
+                    <div id="search" style="float: left;">
+                    <input type="" v-model="inputValue" @input="search_point" @keyup.enter="inputadd()" placeholder="Search camera"/>
+                    </div>
+      
+                  </nav>
+            </div>
+
+            <div class="div2">
+                <div class="imagzone"> 
+                   <div id="app">  
+                      <div class="div3">
+                        <br>
+                        <br>
+                        <br>
+                        <h1>ZENZA BRONICA GS-1(6x7)</h1>
+                        <br>
+                        <img v-bind:src="src" alt=""/>
+                        <br>
+                        <button @click="changepic(0)">1</button>
+                        <button @click="changepic(1)">2</button>
+                        <button @click="changepic(2)">3</button>
+                        <button @click="changepic(3)">4</button>
+                        <h2>$2000</h2>
+                      </div>
+                     
+                   </div>
+                </div>
+                <script src="https://unpkg.com/vue@next"></script>
+                <script>
+                    Vue.createApp({
+                        data(){
+                            return{
+                                src:"Data/1.png",
+                                list:[
+                                "Data/1.png",
+                                "Data/2.png",
+                                "Data/3.png",
+                                "Data/4.png"
+                                ]
+                            }
+                        },
+                        methods:{
+                            changepic(i){
+                               this.src=this.list[i];
+                            }
+                        }
+                    }).mount("#app")
+                </script>
+            </div>
+            <div class="div3"> 
+
+                <span class="content"> 
+                    <br>
+                    <br>
+                    <br>
+                    <h4>Film Back:6x7 120(56x70mm)<br>
+                        Lens:PG 100mm F3.5,ZENZANON PG 250mm F5.6<br>
+                        Product year:1983<br>
+                        Function:fine<br>
+                    </h4>
+                    <p>Introduced in March 1983,Bronica GS-1 with TTL flash metering.The full set has two practical lenses, rare shutter handles, good finish and was last repaired on Aug 4, 2022.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="buy.html">Buy Now </a>
+                </span>
+            </div>
+            <div class="div4"> 
+                
+            </div>
+
+        </div> 
+    </body>
+</html>

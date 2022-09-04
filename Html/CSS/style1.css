@@ -1,0 +1,21 @@
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 5px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 11; }
+    .div2 { grid-area: 2 / 1 / 9 / 6; }
+    .div3 { grid-area: 2 / 6 / 9 / 9; }
+    .div4 { grid-area: 2 / 9 / 9 / 11; }
+    
+    
+
+    .div1{background-color: #3b7eb2;}
+    .imagzone{margin: 0 auto;}
+    .div4{background-color: #e0e0e0;}
+    .div3{text-align: center;}
+    
